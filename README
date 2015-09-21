@@ -1,0 +1,13 @@
+Richard McEwan
+CS437
+
+Compilation: javac Main.java
+Running:     java -Xms1024m -Xmx2048m Main  (with 500 chars as an attribute of the point class)
+
+Creates 30000 points with the X and Y coordinates provided in the dataset. It should take about 8 seconds to build the tree with the chars included.
+
+It supports bulk loading via the makeRTree method but I am only using it for the first few initial points. After that I am using the insert method to fill the tree.
+
+I implemented my own version of the dynamic Hilbert RTree that is discussed in the Encyclopedia of GIS by Springer References.
+
+Duplicates are dealt with by having a pointer to the list of duplicates for each point. Something I would have like to have done would be to implement disk accesses for the points.
